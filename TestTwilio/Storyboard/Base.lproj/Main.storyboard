@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestTwilio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twilio API's" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQb-ej-Gct">
+                                <rect key="frame" x="8" y="44" width="398" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="K6e-dm-0NQ"/>
+                                    <constraint firstAttribute="width" constant="398" id="ppf-EH-ps6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c15-fW-tjb" userLabel="Preview" customClass="TVIVideoView">
+                                <rect key="frame" x="20" y="612" width="120" height="160"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="LCq-5O-WiW"/>
+                                    <constraint firstAttribute="width" constant="120" id="ZTR-3p-Bg6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="br1-ge-KRu">
+                                <rect key="frame" x="107" y="408" width="200" height="80"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="GNo-BX-Nxu"/>
+                                    <constraint firstAttribute="width" constant="200" id="TJk-lS-X7m"/>
+                                </constraints>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l8q-lh-ChZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ri5-By-KeE">
+                                <rect key="frame" x="157" y="802" width="100" height="40"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="X9N-ZA-vZp"/>
+                                    <constraint firstAttribute="height" constant="40" id="suG-la-FvQ"/>
+                                </constraints>
+                                <state key="normal" title="Disconnect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="disconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7L-EB-ihg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6F6-zQ-LJh">
+                                <rect key="frame" x="307" y="802" width="60" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="MUD-qh-GoY"/>
+                                    <constraint firstAttribute="height" constant="40" id="fcr-39-w90"/>
+                                </constraints>
+                                <state key="normal" title="Mute">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleMic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qyr-KB-RLY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIm-wz-5DH">
+                                <rect key="frame" x="47" y="802" width="60" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="P0N-Wh-zDq"/>
+                                    <constraint firstAttribute="height" constant="40" id="lYW-NS-juJ"/>
+                                </constraints>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQb-ej-Gct" secondAttribute="trailing" constant="8" id="2gS-hM-bG0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6F6-zQ-LJh" secondAttribute="trailing" constant="47" id="3q8-q2-wTM"/>
+                            <constraint firstItem="kIm-wz-5DH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="6Wv-5b-2go"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6F6-zQ-LJh" secondAttribute="bottom" constant="20" id="GFy-lc-cQt"/>
+                            <constraint firstItem="br1-ge-KRu" firstAttribute="top" secondItem="MQb-ej-Gct" secondAttribute="bottom" constant="343" id="IhE-yH-tPD"/>
+                            <constraint firstItem="kIm-wz-5DH" firstAttribute="top" secondItem="c15-fW-tjb" secondAttribute="bottom" constant="30" id="Kts-aN-iYj"/>
+                            <constraint firstItem="c15-fW-tjb" firstAttribute="top" secondItem="br1-ge-KRu" secondAttribute="bottom" constant="124" id="Pam-OG-9Dz"/>
+                            <constraint firstItem="br1-ge-KRu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="WST-2x-rUW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ri5-By-KeE" secondAttribute="bottom" constant="20" id="Y8o-Pj-72M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c15-fW-tjb" secondAttribute="trailing" constant="274" id="Zc5-mR-8rn"/>
+                            <constraint firstItem="MQb-ej-Gct" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="baX-Pf-vTZ"/>
+                            <constraint firstItem="MQb-ej-Gct" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="eWX-2s-2Jv"/>
+                            <constraint firstItem="ri5-By-KeE" firstAttribute="leading" secondItem="kIm-wz-5DH" secondAttribute="trailing" constant="50" id="kEm-eg-hCn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kIm-wz-5DH" secondAttribute="bottom" constant="20" id="oik-Wu-R2a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="br1-ge-KRu" secondAttribute="trailing" constant="107" id="pG5-Qd-0kN"/>
+                            <constraint firstItem="c15-fW-tjb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="v2S-cx-Lhu"/>
+                            <constraint firstItem="6F6-zQ-LJh" firstAttribute="leading" secondItem="ri5-By-KeE" secondAttribute="trailing" constant="50" id="zzz-qN-xGL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="kIm-wz-5DH" id="5fE-jg-wls"/>
+                        <outlet property="connectButton" destination="br1-ge-KRu" id="Rf3-a1-RcP"/>
+                        <outlet property="disconnectButton" destination="ri5-By-KeE" id="d7L-aN-FuP"/>
+                        <outlet property="messageResponseLabel" destination="MQb-ej-Gct" id="laH-EQ-HgY"/>
+                        <outlet property="micButton" destination="6F6-zQ-LJh" id="V7T-zT-hMr"/>
+                        <outlet property="previewVideo" destination="c15-fW-tjb" id="Ypr-tz-1Ll"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
